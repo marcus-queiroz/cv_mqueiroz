@@ -107,10 +107,14 @@
   .p4-jobtable td.co { font-weight: 600; }
   .p4-chip { display: inline-block; background: #f0f0ec; border: 1px solid #dcdcda; padding: 2px 7px; font-size: 10.5px; border-radius: 2px; margin: 1px 2px; }
 
+  .p4-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
   @media (max-width: 760px) {
     .chrome { flex-direction: column; align-items: stretch; }
     .chrome-left { padding: 8px 12px; }
     .p4-col-3, .p4-col-4, .p4-col-6, .p4-col-8 { grid-column: span 12; }
+    .p4-timeline-card { display: none; }
+    .p4-wrap { zoom: 1; }
   }
 </style>
 </head>
@@ -214,7 +218,7 @@
           <div style="margin-top:10px;font-size:12.5px;color:#333;line-height:1.6;max-width:860px;">${t(d.summary.pt, d.summary.en)}</div>
         </div>
 
-        <div class="p4-card p4-col-12">
+        <div class="p4-card p4-col-12 p4-timeline-card">
           <h4>${t("Trajetória", "Career Timeline")}</h4>
           <div class="p4-timeline">
             <div class="p4-tl-axis">
@@ -255,7 +259,7 @@
 
         <div class="p4-card p4-col-12">
           <h4>${t("Experiência detalhada", "Detailed experience")}</h4>
-          <table class="p4-jobtable">
+          <div class="p4-table-wrap"><table class="p4-jobtable">
             <thead><tr>
               <th>${t("Empresa", "Company")}</th>
               <th>${t("Cargo", "Role")}</th>
@@ -263,7 +267,7 @@
               <th>${t("Entregas", "Deliverables")}</th>
             </tr></thead>
             <tbody>${jobRows}</tbody>
-          </table>
+          </table></div>
         </div>
 
         <div class="p4-card p4-col-6">
