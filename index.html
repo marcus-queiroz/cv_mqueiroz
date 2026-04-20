@@ -115,6 +115,44 @@
     .p4-col-3, .p4-col-4, .p4-col-6, .p4-col-8 { grid-column: span 12; }
     .p4-timeline-card { display: none; }
     .p4-wrap { zoom: 1; }
+
+    /* Tabela → cartões */
+    .p4-table-wrap { overflow-x: unset; }
+    .p4-jobtable thead { display: none; }
+    .p4-jobtable tbody tr {
+      display: block;
+      background: #f9f9f7;
+      border: 1px solid #e2e2de;
+      border-radius: 6px;
+      margin-bottom: 12px;
+      padding: 12px 14px;
+    }
+    .p4-jobtable td {
+      display: block;
+      border: none;
+      padding: 2px 0;
+      font-size: 13px;
+    }
+    .p4-jobtable td.co {
+      font-size: 15px;
+      font-weight: 700;
+      padding-bottom: 6px;
+      margin-bottom: 6px;
+      border-bottom: 1px solid #e2e2de;
+    }
+    .p4-jobtable td:nth-child(2) {
+      color: #444;
+      font-weight: 500;
+    }
+    .p4-jobtable td:nth-child(3) {
+      font-size: 11px;
+      color: #888;
+      margin-bottom: 6px;
+    }
+    .p4-jobtable td:nth-child(4) {
+      color: #333;
+      line-height: 1.6;
+    }
   }
 </style>
 </head>
